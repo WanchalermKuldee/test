@@ -1,0 +1,59 @@
+<meta charset="utf-8">
+<ons-page ng-controller ="ProbController">
+ <ons-toolbar>
+<div class="left">
+	<ons-back-button id="z1d" >กลับ</ons-back-button>
+</div>
+
+<div class="center">แจ้งปัญหา</div>
+
+
+</ons-toolbar>
+	
+	<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"><img src="../lmages/prob.jpg" width="50"></img></div></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item4.title}}</span>
+              </header>
+              <p class="item-desc">{{item4.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+	
+	
+		 <div style="margin-top: 7px" ; align="center"  >
+ 			<img src="../lmages/pb.png"  height="250" width="300"></img>
+ 		 </div>
+	
+
+            </ons-toolbar> 
+            <ons-list> 
+            <ons-list-header>ปัญหา - รายละเอียดปัญหา</ons-list-header>
+      </ons-list>
+      
+  
+			<div >
+			<input  id="z2d" type="text" ng-model ="titlepb" placeholder="ปัญหาเรื่อง" class="text-input" style ="display: block; width: 100% ">
+		</div>
+	
+		<div style="margin-top: 5px;" align="center">
+
+			<textarea class="textarea" ng-model ="detailpb" rows="6" cols ="50"  placeholder="รายละเอียดปัญหา"></textarea>
+		</div>
+	</ons-list>
+			<div style="margin-top: 7px;" align="center">
+
+			<ons-button id="z3d"  modifier="outline" ng-click="addProblem()">บันทึกปัญหา </ons-button>
+		
+			<ons-button id="z4d"  modifier="outline" ng-click="ons.navigator.pushPage('page9_3.html')">
+			แสดงปัญหา
+			</ons-button>
+			</div>
+		
+</ons-page>
+

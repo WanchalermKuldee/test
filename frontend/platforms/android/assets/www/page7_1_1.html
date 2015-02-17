@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<ons-page ng-controller="DeliveryController">
+  <ons-toolbar>
+    <div class="left">
+	  <ons-back-button id="dbz"  >กลับ</ons-back-button>
+	</div>
+	<div class="center">จำนวนวัน</div>
+  </ons-toolbar>
+      <ons-list>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="a10"  type="radio" name="day" ng-model="daytotal" value="7">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-clock-o"></i><b>&nbsp; 7&nbsp;วัน</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="a11"   type="radio" name="day" ng-model="daytotal" value="6">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-clock-o"></i><b>&nbsp; 6&nbsp;วัน</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="a12"   type="radio" name="day" ng-model="daytotal" value="5">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-clock-o"></i><b>&nbsp; 5&nbsp;วัน</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="a13"   type="radio" name="day" ng-model="daytotal" value="4">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-clock-o"></i><b>&nbsp; 4&nbsp;วัน</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="a14"   type="radio" name="day" ng-model="daytotal" value="3">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-clock-o"></i><b>&nbsp; 3&nbsp;วัน</b>
+          </label>
+        </ons-list-item>
+      </ons-list>
+      <div align="center" style="padding-top:30px">
+      <ons-button id="a105"   ng-click="deliveryUpdate()" modifier="outline" style="width: 70%">
+        <b>Ready</b>
+      </ons-button>
+      </div>
+</ons-page>

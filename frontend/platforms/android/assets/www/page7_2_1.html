@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<ons-page ng-controller="DeliveryController">
+  <ons-toolbar>
+    <div class="left">
+	  <ons-back-button id="d1d"  >กลับ</ons-back-button>
+	</div>
+	<div class="center">รูปแบบการจัดส่ง</div>
+  </ons-toolbar>
+      <ons-list>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="d2d"  type="radio" name="type" ng-model="deliverytype" value="plane">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-plane"></i><b>&nbsp; By&nbsp;Plane</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="d3d"  type="radio" name="type" ng-model="deliverytype" value="ship">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-ship"></i><b>&nbsp; By&nbsp;Ship</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="d4d"  type="radio" name="type" ng-model="deliverytype" value="truck">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-truck"></i><b>&nbsp; By&nbsp;Truck</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="d5d"  type="radio" name="type" ng-model="deliverytype" value="train">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-train"></i><b>&nbsp; By&nbsp;Train</b>
+          </label>
+        </ons-list-item>
+      </ons-list>
+      <div align="center" style="padding-top:30px">
+      <ons-button id="d6d"  ng-click="deliveryUpdate()" modifier="outline" style="width: 70%">
+        <b>Ready</b>
+      </ons-button>
+      </div>
+</ons-page>

@@ -1,0 +1,53 @@
+ <meta charset="utf-8">
+<ons-page ng-controller="OrderProductController">
+      <ons-toolbar>
+      <div class="left">
+		<ons-back-button id="55">กลับ</ons-back-button>
+	</div>
+        <div class="center">เพิ่มใบรายการสินค้า</div>
+      </ons-toolbar>
+		 <ul class="list">
+  <li class="list__header">
+  <i class="fa fa-file-o"></i>
+  <b>
+   ใบรายการสินค้า
+   </b>
+  </li>
+ <ons-list>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="q2d" type="radio" name="day" ng-model="productname" value="eco" ng-click="caleco()">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-desktop"></i><b>&nbsp;&nbsp; Eco Computer</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="q3d" type="radio" name="day" ng-model="productname" value="gaming" ng-click="calgaming()">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-desktop"></i><b>&nbsp;&nbsp; Gaming Computer</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="q4d" type="radio" name="day" ng-model="productname" value="office" ng-click="caloffice()">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-desktop"></i><b>&nbsp;&nbsp; Office Computer</b>
+          </label>
+        </ons-list-item>
+      </ons-list>
+  <li class="list__item">
+    <input type="number" class="from-control" id="q5d" ng-model="amount" style="width:100%; margin-top:4px;" placeholder="จำนวน">
+  </li>
+  <li class="list__item">
+	<p><i class="fa fa-btc"></i><b> ราคา {{unit}} บาท</b></p>
+  </li>
+  <li class="list__item">
+	<p><i class="fa fa-btc"></i><b> ราคารวม {{amount*unit}} บาท</b></p>
+  </li>
+
+</ul>
+      
+	
+<button class="button--large--cta" ng-click="addOrderProduct()">เพิ่มใบรายการสินค้า</button>
+
+		
+ 
+    </ons-page> 

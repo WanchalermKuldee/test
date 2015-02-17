@@ -1,0 +1,171 @@
+<meta charset="utf-8">
+<ons-page ng-controller ="ManufacController">
+ <ons-toolbar>
+<div class="left">
+	<ons-back-button id="z1e" >กลับ</ons-back-button>
+</div>
+<div class="center">การผลิต</div>
+
+</ons-toolbar>
+
+<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"><img src="../lmages/4.ico" width="50"></img></div></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item4.title}}</span>
+              </header>
+              <p class="item-desc">{{item4.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+	
+	
+
+	<ons-list-header>ส่วนประกอบ</ons-list-header>
+
+	
+	<div class="list">
+		<li id="z1a"  class="list__item list__item--tappable" onclick="selType1.show()">CPU {{sum}} ชิ้น </li>
+		<li id="z2a"  class="list__item list__item--tappable" onclick="selType2.show()">Mainboard  {{sum2}} ชิ้น </li>
+		<li id="z3a"  class="list__item list__item--tappable" onclick="selType3.show()">Ram {{sum3}} ชิ้น </li>
+		<li id="z4a"  class="list__item list__item--tappable" onclick="selType4.show()">VGA-Card  {{sum4}} ชิ้น </li>
+		<li id="z5a"  class="list__item list__item--tappable" onclick="selType5.show()">DVD-Rom  {{sum5}} ชิ้น </li>
+		<li id="z6a"  class="list__item list__item--tappable" onclick="selType6.show()">Accessoeies  {{sum6}} ชุด</li>
+	</div>
+<ons-modal var="selType1">
+		<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	
+	<ons-list> 
+	<ons-list-header><FONT COLOR="black"><b>ชื่อส่วนประกอบ</b></FONT></ons-list-header>
+	 <ons-list-item>CPU
+	<br>
+	<ons-list-header><FONT COLOR="black"><b>จำนวน /1 เครื่อง</b></ons-list-header>
+	 <ons-list-item>{{ count }}ชิ้น<br>
+		<div align="center" >
+			<ons-button id="pp"  ng-click="comsump" ng-init="count=1"><ons-icon icon="fa fa-plus"></ons-icon></ons-button> 
+		    <ons-button id="p1p"   ng-click="comsoml" ng-init="count=1"><ons-icon icon="fa fa-minus"></ons-icon></ons-button> 
+		</div> 
+   </ons-list-item>
+
+	
+	<div align="center" >
+		<ons-button	modifier="outline" ng-click="cal()" onclick="selType1.hide()" id="pp1"   >จัดเก็บ</ons-button>
+	</div>
+		</ons-list-item>
+		</ons-list>
+		</div>
+	</ons-modal>		
+ 
+ <ons-modal var="selType2">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+		
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อส่วนประกอบ</b></FONT></ons-list-header>
+        	<ons-list-item>Mainboard
+        	  	<br>
+        	  	<ons-list-header><FONT COLOR="black"><b>จำนวน/1เครื่อง</b></ons-list-header>
+        		        		<ons-list-item>{{ count2 }} ชิ้น<br>
+        			<div align="center" >
+        			<ons-button  id="p2p"   ng-click="count2 = count2 + 1" ng-init="count2=1"><ons-icon icon="fa fa-plus"></ons-icon></ons-button>
+         			<ons-button  id="p3p"   ng-click="count2 = count2 - 1" ng-init="count2=1"><ons-icon icon="fa fa-minus"></ons-icon></ons-button>
+         			</div>
+       			 </ons-list-item>        	       		
+      <div align="center" ><ons-button	modifier="outline" ng-click="cal2()" id="p4p"   onclick="selType2.hide()" >จัดเก็บ</ons-button></div>
+    	</ons-list>
+	</div>
+</ons-modal>
+
+<ons-modal var="selType3">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	
+		<ons-list>
+			<ons-list-header><FONT COLOR="black"><b>ชื่อส่วนประกอบ</b></FONT></ons-list-header>
+        	<ons-list-item>Ram</ons-list-item>
+        	  	<br>
+        	  	<ons-list-header><FONT COLOR="black"><b>จำนวน/1เครื่อง</b></ons-list-header>
+        		        		<ons-list-item>{{ count3 }} ชิ้น<br>
+        			<div align="center" >
+        			<ons-button  id="p5p"   ng-click="count3 = count3 + 1" ng-init="count3=1"><ons-icon icon="fa fa-plus"></ons-icon></ons-button>
+         			<ons-button  id="pp5"   ng-click="count3 = count3 - 1" ng-init="count3=1"><ons-icon icon="fa fa-minus"></ons-icon></ons-button>
+         			</div>
+       			 </ons-list-item>        	       		
+      <div align="center" >
+    		<ons-button	modifier="outline" ng-click="cal3()" id="p6p"   onclick="selType3.hide()" >จัดเก็บ</ons-button>
+      </div>
+    	</ons-list>
+	</div>
+</ons-modal>
+
+<ons-modal var="selType4">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	
+		<ons-list>
+			<ons-list-header><FONT COLOR="black"><b>ชื่อส่วนประกอบ</b></FONT></ons-list-header>
+        	<ons-list-item>VGA-Card</ons-list-item>
+        	  	<br>
+        	  	<ons-list-header><FONT COLOR="black"><b>จำนวน/1เครื่อง</b></ons-list-header>
+        		        		<ons-list-item>{{ count4 }} ชิ้น<br>
+        			<div align="center" >
+        			<ons-button  id="p7p"   ng-click="count4 = count4 + 1" ng-init="count4=1"><ons-icon icon="fa fa-plus"></ons-icon></ons-button>
+         			<ons-button  id="p8p"   ng-click="count4 = count4 - 1" ng-init="count4=1"><ons-icon icon="fa fa-minus"></ons-icon></ons-button>
+         			</div>
+       			 </ons-list-item>        	       		
+      <div align="center" >
+    		<ons-button	modifier="outline" ng-click="cal4()" id="p9p"   onclick="selType4.hide()" >จัดเก็บ</ons-button>
+      </div>
+    	</ons-list>
+	</div>
+</ons-modal>
+
+<ons-modal var="selType5">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	
+		<ons-list>
+			<ons-list-header><FONT COLOR="black"><b>ชื่อส่วนประกอบ</b></FONT></ons-list-header>
+        	<ons-list-item>DVD-Rom</ons-list-item>
+        	  	<br>
+        	  	<ons-list-header><FONT COLOR="black"><b>จำนวน/1เครื่อง</b></ons-list-header>
+        		        		<ons-list-item>{{ count5 }} ชิ้น<br>
+        			<div align="center" >
+        			<ons-button  id="1pp"   ng-click="count5 = count5 + 1" ng-init="count5=1"><ons-icon icon="fa fa-plus"></ons-icon></ons-button>
+         			<ons-button  id="2pp"   ng-click="count5 = count5 - 1" ng-init="count5=1"><ons-icon icon="fa fa-minus"></ons-icon></ons-button>
+         			</div>
+       			 </ons-list-item>        	       		
+      <div align="center" >
+    		<ons-button	modifier="outline" ng-click="cal5()" id="3pp"   onclick="selType5.hide()" >จัดเก็บ</ons-button>
+      </div>
+    	</ons-list>
+	</div>
+</ons-modal>
+
+<ons-modal var="selType6">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	
+		<ons-list>
+			<ons-list-header><FONT COLOR="black"><b>ชื่อส่วนประกอบ</b></FONT></ons-list-header>
+        	<ons-list-item>Accessoeies</ons-list-item>
+        	  	<br>
+        	  	<ons-list-header><FONT COLOR="black"><b>จำนวน/1เครื่อง</b></ons-list-header>
+        		        		<ons-list-item>{{ count6 }} ชิ้น<br>
+        			<div align="center" >
+        			<ons-button  id="tpp"   ng-click="count6 = count6 + 1" ng-init="count6=1"><ons-icon icon="fa fa-plus"></ons-icon></ons-button>
+         			<ons-button  id="xpp"   ng-click="count6 = count6 - 1" ng-init="count6=1"><ons-icon icon="fa fa-minus"></ons-icon></ons-button>
+         			</div>
+       			 </ons-list-item>        	       		
+      <div align="center" >
+    		<ons-button	modifier="outline" ng-click="cal6()"  id="pcp"  onclick="selType6.hide()" >จัดเก็บ</ons-button>
+      </div>
+    	</ons-list>
+	</div>
+</ons-modal>
+</ons-list>	
+		<div style="margin-top: 7px;" align="center">
+			<ons-button modifier="outline" id="pmp"   ng-click="addManufac()">บันทึก</ons-button>
+			
+		</div>
+
+</ons-page>

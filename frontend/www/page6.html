@@ -1,0 +1,91 @@
+<meta charset="utf-8">
+<ons-page ng-controller = "supplierController">
+	<ons-toolbar>
+		<div class="left" >
+			<ons-back-button id="jj"  >กลับ</ons-back-button>
+		</div>
+		<div class="center">ตรวจสอบรายการสั่งสินค้า</div>
+	</ons-toolbar>
+	
+	<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div><img src="../lmages/3.png" width="50"></img></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">ใบรายการสั่งสินค้า</span>
+              </header>
+              <p class="item-desc">ตรวจสอบใบรายการสั่งสินค้าจากผู้ให้บริการ</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        <ons-list> 
+        <ons-list-item>
+          <ons-row>
+            <ons-col align="left">
+              <b><font size="1">เลขทที่</font></b>
+            </ons-col>
+            <ons-col align="left">
+              <b><font size="1">CPU</font></b>
+            </ons-col>
+             <ons-col align="center">
+              <b><font size="1">Mainboard</font></b>
+            </ons-col>
+             <ons-col align="center">
+              <b><font size="1">Ram</font></b>
+            </ons-col>
+             <ons-col align="center">
+              <b><font size="1">VGA</font></b>
+            </ons-col>
+            <ons-col align="center">
+              <b><font size="1">DVD</font></b>
+            </ons-col>
+            <ons-col align="center">
+              <b><font size="1">Acc</font></b>
+            </ons-col>
+            <ons-col align="center">
+              <b><font size="1">Price</font></b>
+            </ons-col>
+            <ons-col align="center">
+              <b><font size="1">Emp</font></b>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        
+        <ons-list-item style="height: 30px" modifier="tappable" ng-repeat="data in datas | filter:queryString">
+          <ons-row>
+            <ons-col align="center">
+              <font size="1">{{data.id}}</font>
+            </ons-col>
+            <ons-col align="center">
+              <font size="1">{{data.cpu}}</font>
+            </ons-col>
+             <ons-col align="center">
+              <font size="1">{{data.mainboard}}</font>
+            </ons-col> 
+             <ons-col align="center">
+              <font size="1">{{data.ram}}</font>
+            </ons-col> 
+             <ons-col align="center"> 
+              <font size="1">{{data.vga}}</font>
+            </ons-col>   
+            <ons-col align="center">
+              <font size="1">{{data.dvd}}</font>
+            </ons-col>
+             <ons-col align="center">
+              <font size="1">{{data.acces}}</font>
+            </ons-col> 
+             <ons-col align="center">
+              <font size="1">{{data.price}}</font>
+            </ons-col> 
+             <ons-col align="center"> 
+              <font size="1">{{data.emp}}</font>
+            </ons-col>         
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+	
+</ons-page>

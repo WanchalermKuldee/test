@@ -1,0 +1,66 @@
+<meta charset="utf-8">
+
+<ons-page ng-controller="ManaController2">
+  <ons-toolbar>
+   
+	
+	<div class="center">รายการแก้ไขพนักงาน</div>
+	
+	<div class="left" >
+						<ons-back-button id="bbbk"> ย้อนกลับ</ons-back-button>
+		</div>
+		
+  </ons-toolbar>
+   <li class="list__header">
+ <i class="fa fa-search-plus"></i>
+  <b>
+   ค้นหาพนักงาน
+   </b>
+  </li>
+ <ons-list>
+          <input id="bmn" type="search" value="" placeholder="Search" class="search-input" ng-model="queryString">
+        <ons-list-item>
+           <ons-list>
+        <ons-list-item>
+          <ons-row>
+            <ons-col align="left">
+              <b>ไลน์ผลิต</b>
+            </ons-col>
+            <ons-col align="left">
+              <b>ชื่อ</b>
+            </ons-col>
+            <ons-col align="left">
+              <b>นามสกุล</b>
+            </ons-col>
+             <ons-col align="right">
+              <b>เบอร์โทร</b>
+            </ons-col>
+           
+            
+            
+          </ons-row>
+        </ons-list-item>
+          <ons-list-item style="height: 30px" modifier="tappable" ng-repeat="data in datas | filter:queryString">
+          <ons-row>
+           
+            <ons-col align="left">
+              {{data.nameLineManager}}
+            </ons-col>
+            <ons-col align="left">
+              {{data.name}}
+            </ons-col>
+             <ons-col align="lief">
+              {{data.lastname}}
+            </ons-col>
+             <ons-col align="center">
+              {{data.telphone}}
+            </ons-col> 
+            
+            
+            </ons-row>
+        </ons-list-item>
+      </ons-list>
+     
+	
+	
+ </ons-page>

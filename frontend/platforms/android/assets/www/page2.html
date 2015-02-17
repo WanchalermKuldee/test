@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<ons-page ng-controller="ShowController">
+  <ons-toolbar>
+    <div class="left">
+			<ons-back-button id="backzz">กลับ</ons-back-button>
+		</div>
+	<div class="center">แสดงสถานที่การจัดส่งสินค้า</div>
+  </ons-toolbar>
+  
+  	<ons-list modifier="inset" style="margin-top: 10px">
+        
+        
+        <div class="center" align="center"  ><img src="../lmages/mapp.png"  height="170" width="170"></img> </div>
+  
+  
+           <ons-list>
+        <ons-list-item style="height: 150px"  ng-click="" modifier="tappable" ng-repeat="data in datas">
+          
+	 <ons-row>
+            <ons-col>
+              <div class="">
+                <i class="fa fa-map-marker"></i> <b>{{data.username}}</b> Tel.{{data.tel}}
+              </div>
+              <div class="">
+                {{data.address}} 
+              </div>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+     		
+</ons-page>

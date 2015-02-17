@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+
+<ons-page ng-controller="DeliveryController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-back-button id="b1"  >กลับ</ons-back-button>
+		</div>
+		<div class="center">จำนวนวัน</div>
+	</ons-toolbar>
+	
+	<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div><img src="../lmages/clock.png" width="50"></img></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item6.title}}</span>
+              </header>
+              <p class="item-desc">{{item6.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        
+	
+	  
+        <ons-list-item>
+          <ons-row>
+            <ons-col align="left">
+              <b>Customer Name</b>
+            </ons-col>
+            <ons-col align="left">
+              <b>Product Name</b>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        <ons-list-item id="b2"   style="height: 60px" ng-click="setShared(data.id,data.customername)" modifier="tappable" ng-repeat="data in datas">
+          <ons-row>
+            <ons-col width="50%">
+              <i class="fa fa-user"></i>
+              {{data.customername}}
+            </ons-col>
+            <ons-col>
+         		<i class="fa fa-desktop"></i>
+              {{data.productname}}
+            </ons-col>           
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+
+</ons-page>

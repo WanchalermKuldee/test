@@ -1,0 +1,267 @@
+<meta charset="utf-8">
+<body>
+<ons-page ng-controller = "supplierController"> 
+<ons-toolbar>
+<div class="left">
+		<ons-back-button id="bbp">กลับ</ons-back-button>
+	</div>
+<div class="center">สั่งสินค้าจากผู้ให้บริการ</div>
+<div class="right">
+			<ons-button id="tty" modifier="quiet" ng-click="ons.navigator.pushPage('page6.html')">
+			<ons-icon icon="ion-chevron" style="color: blue"></ons-icon>ตรวจสอบ
+			</ons-button>
+</div>
+</ons-toolbar>
+<ons-list modifier="inset" style="margin-top: 10px">
+<ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div><img src="../lmages/3.png" width="50"></img></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item3.title}}</span>
+              </header>
+              <p class="item-desc">{{item3.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+<ons-modal var="selType1">
+	
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon id="o1" class="left" icon="ion-xbox" onclick="selType1.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+	<br>
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อสินค้า</b></FONT></ons-list-header>
+        	<ons-list-item>CPU<br>
+
+        	<ons-list-header><FONT COLOR="black"><b>จำนวน</b></ons-list-header>
+        		<ons-list-item>{{ count }} ชิ้น<br>
+        			
+       			 </ons-list-item>
+        
+        	<ons-list-header><FONT COLOR="black"><b>ราคารวม</b></ons-list-header>
+        		<ons-list-item>{{sum}} บาท</ons-list-item>
+        		
+        		
+      
+    	
+    	</ons-list>
+	</div>
+</ons-modal>
+<ons-modal var="selType2">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon class="left"  id="o2" icon="ion-xbox" onclick="selType2.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+	<br>
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อสินค้า</b></FONT></ons-list-header>
+        	<ons-list-item>Mainbord
+        	  	<br>
+        	  	
+        		
+        
+        	<ons-list-header><FONT COLOR="black"><b>จำนวน</b></ons-list-header>
+        		<ons-list-item>{{ count2 }} ชิ้น<br>
+        			
+       			 </ons-list-item>
+        
+        	<ons-list-header><FONT COLOR="black"><b>ราคารวม</b></ons-list-header>
+        		<ons-list-item>{{sum2}} บาท</ons-list-item>
+        		
+        		
+        		
+      
+    	
+    	</ons-list>
+	</div>
+</ons-modal>
+<ons-modal var="selType3">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon class="left" id="o3"  icon="ion-xbox" onclick="selType3.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+	<br>
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อสินค้า</b></FONT></ons-list-header>
+        	<ons-list-item>Ram
+        	  	<br>
+        	  	
+        		
+        
+        	<ons-list-header><FONT COLOR="black"><b>จำนวน</b></ons-list-header>
+        		<ons-list-item>{{ count3 }} ชิ้น<br>
+        			
+       			 </ons-list-item>
+        
+        	<ons-list-header><FONT COLOR="black"><b>ราคารวม</b></ons-list-header>
+        		<ons-list-item>{{sum3}} บาท</ons-list-item>
+        		
+        		
+        		
+      
+    	
+    	</ons-list>
+	</div>
+</ons-modal>
+<ons-modal var="selType4">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon class="left" id="o4"  icon="ion-xbox" onclick="selType4.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+	<br>
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อสินค้า</b></FONT></ons-list-header>
+        	<ons-list-item>VGA-Card
+        	  	<br>
+        	  	
+        		
+        
+        	<ons-list-header><FONT COLOR="black"><b>จำนวน</b></ons-list-header>
+        		<ons-list-item>{{ count4 }} อัน<br>
+        			
+       			 </ons-list-item>
+        
+        	<ons-list-header><FONT COLOR="black"><b>ราคารวม</b></ons-list-header>
+        		<ons-list-item>{{sum4}} บาท</ons-list-item>
+        		
+        		
+      
+    	
+    	</ons-list>
+	</div>
+</ons-modal>
+<ons-modal var="selType5">
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon class="left" id="o5"  icon="ion-xbox" onclick="selType5.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+	<br>
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อสินค้า</b></FONT></ons-list-header>
+        	<ons-list-item>DVD-Rom
+        	  	<br>
+        	  	
+        		
+        
+        	<ons-list-header><FONT COLOR="black"><b>จำนวน</b></ons-list-header>
+        		<ons-list-item>{{ count5 }} ชิ้น<br>
+        			
+       			 </ons-list-item>
+        
+        	<ons-list-header><FONT COLOR="black"><b>ราคารวม</b></ons-list-header>
+        		<ons-list-item>{{sum5}} บาท</ons-list-item>
+        		
+        		
+        		
+      
+    	
+    	</ons-list>
+	</div>
+</ons-modal>
+<ons-modal var="selType6">
+
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon class="left" id="o6"  icon="ion-xbox" onclick="selType6.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+	<br>
+		<ons-list>
+		<ons-list-header><FONT COLOR="black"><b>ชื่อสินค้า</b></FONT></ons-list-header>
+        	<ons-list-item>Accessoeies
+        	  	<br>
+        	  	
+        		
+        
+        	<ons-list-header><FONT COLOR="black"><b>จำนวน</b></ons-list-header>
+        		<ons-list-item>{{ count6 }} ชุด<br>
+        			
+       			 </ons-list-item>
+        
+        	<ons-list-header><FONT COLOR="black"><b>ราคารวม</b></ons-list-header>
+        		<ons-list-item>{{sum6}} บาท</ons-list-item>
+        		
+        		
+
+    	</ons-list>
+	</div>
+</ons-modal>
+
+
+
+
+<ons-modal var="selType7" >
+	<div class="modal_content" style="background-color: #FFF; margin: 20px; padding: 10px; color: #000;">
+	<div class="left"><ons-icon class="left" id="o7"  icon="ion-xbox" onclick="selType7.hide()" style="color:#F78181"><font size="3">Close</font></ons-icon></div>
+		<ons-list>
+        <ons-list-item style="height: 30px"  ng-click="watShared2(data.id,data.username)" modifier="tappable" ng-repeat="data in datas">
+          <ons-row>
+            <ons-col width="50%">
+            <i class="fa fa-user"></i>
+              {{data.username}}
+            </ons-col>           
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+	</div>
+</ons-modal>
+
+<ons-list>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input  id="y1" type="radio" name="day" ng-model="productname" value="eco" ng-click="eco()">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-desktop"></i><b>&nbsp;&nbsp; Eco Computer</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="y2"  type="radio" name="day" ng-model="productname" value="gaming" ng-click="game()">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-desktop"></i><b>&nbsp;&nbsp; Gaming Computer</b>
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable" class="radio-button">
+          <label class="radio-button radio-button--list-item">
+            <input id="y3"  type="radio" name="day" ng-model="productname" value="office" ng-click="office()">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div><i class="fa fa-desktop"></i><b>&nbsp;&nbsp; Office Computer</b>
+          </label>
+        </ons-list-item>
+      </ons-list>
+    
+<ul class="list">
+  <li class="list__item list__item--tappable" id="c1"  onclick="selType1.show()"> 
+CPU           [{{scount}}] ชิ้น
+  </li>	
+    <li class="list__item list__item--tappable" id="c2"   onclick="selType2.show()"> 
+Mainbord      [{{scount2}}] ชิ้น
+  </li>	
+    <li class="list__item list__item--tappable" id="c3"   onclick="selType3.show()"> 
+Ram           [{{scount3}}] ชิ้น
+  </li>	
+      <li class="list__item list__item--tappable"  id="c4"  onclick="selType4.show()"> 
+VGA-Card      [{{scount4}}] ชิ้น
+  </li>	
+  <li class="list__item list__item--tappable" id="c5"   onclick="selType5.show()"> 
+DVD-Rom       [{{scount5}}] ชิ้น
+  </li>
+  <li class="list__item list__item--tappable" id="c6"   onclick="selType6.show()"> 
+Accessoeies   [{{scount6}}] ชุด
+  </li>		
+   
+  </ul>
+<div>
+<ons-list-item><ons-row><ons-col>{{ com }} เครื่อง</ons-col>
+			<ons-col align="right" >
+			<ons-icon  id="p1"  ng-click="com = com + 1" ng-init="com=1" style="font-size: 20px; vertical-align: -4px;" icon="fa fa-plus"></ons-icon>&nbsp; &nbsp; &nbsp; 
+		    <ons-icon  id="p2"  ng-click="com = com - 1" ng-init="com=1" style="font-size: 20px; vertical-align: -4px;" icon="fa fa-minus"></ons-icon>&nbsp; &nbsp; </ons-col></ons-row>
+   </ons-list-item>
+</div>
+
+
+
+<ul class="list">
+<ons-list-header><FONT COLOR="black"><b>ลูกค้าที่สั่งสินค้า</b></ons-list-header>
+<ons-list-item><ons-row><ons-col>{{m}}</ons-col><ons-col align="right"><ons-button id="c7"   ng-click="selType7.show()">เลือกลูกค้า</ons-button></ons-col></ons-row></ons-list-item>
+</ul>
+
+
+
+
+<ul class="list">
+<ons-list-header><FONT COLOR="black"><b>ราคาสินค้าทั้งหมด</b></ons-list-header>
+        		<ons-list-item modifier="tappable">{{total7}} บาท</ons-list-item>
+        		</ul>
+
+<ons-button modifier="large" id="cc"   ng-click="addSupplier()"><ons-icon icon="fa fa-download"></ons-icon></ons-button>          
+</ons-page>
+</body>

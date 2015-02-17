@@ -1,0 +1,2 @@
+INSERT INTO user (user_name, pass_word, name, last_name) VALUES ('admin', '12345', 'myadmin', 'testadmin')
+INSERT INTO user (user_name, pass_word, name, last_name) VALUES ('user', '12345', 'myuser', 'testuser')

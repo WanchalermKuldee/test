@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<ons-page>
+  <ons-toolbar>
+    <div class="left">
+      <ons-back-button id="x1d" >กลับ</ons-back-button>
+    </div>
+    <div class="center">การจัดส่ง</div>
+  </ons-toolbar>
+  <ons-list modifier="inset" style="margin-top: 10px">
+    <ons-list-item align="center">
+      <div><img src="../lmages/delivery.png" width="300"></img></div>
+    </ons-list-item>
+    <ons-list-item modifier="tappable" id="x2d"  ng-click="ons.navigator.pushPage('page7_1.html')">
+      <i class="fa fa-clock-o"></i>
+      &nbsp;<b>ทางเลือกในการจัดส่ง</b>
+    </ons-list-item>
+    <ons-list-item modifier="tappable" id="x3d"  ng-click="ons.navigator.pushPage('page7_2.html')">
+      <i class="fa fa-plane"></i>
+      &nbsp;<b>รูปแบบในการจัดส่ง</b>
+    </ons-list-item>
+  </ons-list>
+</ons-page>

@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<ons-page ng-controller="ProbController" >
+<ons-toolbar>
+<div class="left">
+	<ons-back-button id="z5d" >กลับ</ons-back-button>
+</div>
+
+<div class="center">ปัญหา</div>
+
+</ons-toolbar>
+<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div class="item-thum"><img src="../lmages/problem.jpg" width="50"></img></div></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item4.title}}</span>
+              </header>
+              <p class="item-desc">{{item4.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+ 
+
+ <ons-list>
+        <ons-list-item>
+          <ons-row>
+            <ons-col align="left">
+              <b>ปัญหาเรื่อง</b>
+            </ons-col>
+            <ons-col align="left">
+              <b>รายละเอียด</b>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        <ons-list-item style="height: 60px" modifier="tappable" ng-repeat="data in datas">
+          <ons-row>
+            <ons-col width="50%">
+              
+              {{data.titlepb}}
+            </ons-col>
+            <ons-col>
+         	
+              {{data.detailpb}}
+            </ons-col>           
+          </ons-row>
+       
+      </ons-list>
+
+</ons-page>

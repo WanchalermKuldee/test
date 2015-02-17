@@ -1,0 +1,74 @@
+<meta charset="utf-8">
+
+<ons-page ng-controller="OrderProductController2">
+  <ons-toolbar>
+    <div class="left">
+			<ons-back-button id="p3d">กลับ</ons-back-button>
+		</div>
+	<div class="center">ค้นหาใบรายการสินค้า</div>
+  </ons-toolbar>
+  
+  	<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div><img src="../lmages/7.png" width="50"></img></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item7.title}}</span>
+              </header>
+              <p class="item-desc">{{item7.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+  
+   <li class="list__header">
+ <i class="fa fa-search-plus"></i>
+  <b>
+   ค้นหาใบรายการสินค้า
+   </b>
+  </li>
+           <ons-list>
+          <input type="search" id="p4d" placeholder="Search" class="search-input" ng-model="queryString.customername">
+        <ons-list-item>
+          <ons-row>
+            <ons-col align="left">
+              <b>ชื่อ</b>
+            </ons-col>
+            <ons-col align="left">
+              <b>สินค้า</b>
+            </ons-col>
+             <ons-col align="center">
+              <b>จำนวน</b>
+            </ons-col>
+             <ons-col align="center">
+              <b>ราคา</b>
+            </ons-col>
+             <ons-col align="center">
+              <b>ราคารวม</b>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        <ons-list-item style="height: 30px" modifier="tappable" ng-repeat="data in datas | filter:queryString">
+          <ons-row>
+            <ons-col align="left">
+              {{data.customername}}
+            </ons-col>
+            <ons-col align="left">
+              {{data.productname}}
+            </ons-col>
+             <ons-col align="center">
+              {{data.amount}}
+            </ons-col> 
+             <ons-col align="center">
+              {{data.price}}
+            </ons-col> 
+             <ons-col align="center"> 
+              {{data.totalprice}}
+            </ons-col>            
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
+</ons-page>
+

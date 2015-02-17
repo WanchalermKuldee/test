@@ -1,0 +1,107 @@
+<meta charset="utf-8">
+<ons-page ng-controller="DatauserController">
+	<ons-toolbar>
+		<div class="left">
+			<ons-back-button id="back1">กลับ</ons-back-button>
+		</div>
+		<div class="center">เพิ่มข้อมูลลูกค้า</div>
+	</ons-toolbar>
+	
+	<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div><img src="../lmages/1.ico" width="50"></img></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item.title}}</span>
+              </header>
+              <p class="item-desc">{{item.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+	
+	<ons-col>
+	
+	
+	
+	 <ons-modal var="selType1">
+	บันทึกเรียบร้อยแล้ว
+	
+	<div align="center" style="line-height: 100px">     
+          <ons-icon    icon="fa-check-square" size="220px" ng-click="addDatauser()"  fixed-width="true" id="hidep" onclick="selType1.hide()"></ons-icon>
+         
+
+               </div>
+	
+	</ons-modal>
+	
+	<ons-col>
+	
+	<br>
+	
+	 <div class="center" align="center"  ><img src="../lmages/user.png"  height="200" width="200"></img> </div>
+	
+	
+	
+            </ons-toolbar> <ons-list> <ons-list-header> ชื่อ-สกุล</ons-list-header>
+          </ons-col>
+  
+			<div >
+			<input id="namep" type="text" ng-model ="username" placeholder="กรอกชื่อ" class="text-input" placeholder=""
+			 style ="display: block; width: 100% ">
+		</div>
+	
+	
+	
+	<ons-col>
+             </ons-toolbar> <ons-list><ons-list-header>อายุ</ons-list-header>
+          </ons-col>
+          
+	
+	<div >
+			<input id="agep" type="text" ng-model ="age" placeholder="กรอกอายุ" class="text-input" placeholder=""
+			 style ="display: block; width: 100% ">
+		</div>
+	
+
+
+
+	<ons-col>
+            </ons-toolbar> <ons-list> <ons-list-header>ที่อยู่</ons-list-header>
+          </ons-col>
+         
+           <div >
+			<input id="assp" type="text" ng-model ="address" placeholder="กรอกที่อยู่" class="text-input" placeholder=""
+			 style ="display: block; width: 200% ">
+		</div>
+		
+		
+		<ons-col>
+		</ons-toolbar> <ons-list> <ons-list-header>เบอร์โทรศัพท์</ons-list-header>
+          </ons-col>
+         
+           <div>
+			<input id="et" type="text" ng-model ="tel" placeholder="กรอกเบอร์โทรศัพท์" class="text-input" placeholder=""
+			 style ="display: block; width: 200% ">
+		</div>
+		
+		<ons-col>
+		</ons-toolbar> <ons-list><ons-list-header>อี-เมล</ons-list-header>
+          </ons-col>
+         
+           <div>
+			<input id="em" type="text" ng-model ="email" placeholder="กรอกอี-เมล" class="text-input" placeholder=""
+			 style ="display: block; width: 200% ">
+		</div>
+		
+ <div style="color: #666">
+ <br><br>
+        <div align="center" style="line-height: 100px">     
+          <ons-icon   id="showp"  icon="fa-plus-square" size="70px" onclick="selType1.show()"  fixed-width="true"></ons-icon>
+          <ons-icon   id="p2"  icon="fa-pencil-square-o" size="70px"  ng-click="ons.navigator.pushPage('page2.html')" ></ons-icon>
+         
+
+               </div>
+</ons-page>

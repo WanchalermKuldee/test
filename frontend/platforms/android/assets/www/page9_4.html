@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+
+<ons-page ng-controller="ManufacController">
+	<ons-toolbar>
+	  <div class="left">
+			<ons-back-button id="z6d" >กลับ</ons-back-button>
+		</div>
+		<div class="center">การผลิต</div>
+		<div class="right">
+		<ons-button modifier="button--large--quiet"  id="z7d" ng-click="ons.navigator.pushPage('page9_2.html')">
+			แจ้งปัญหา
+			</ons-button>
+			</div>
+	</ons-toolbar>
+	
+	<ons-list modifier="inset" style="margin-top: 10px">
+        <ons-list-item class="item">
+          <ons-row>
+            <ons-col width="60px"> 
+              <div><img src="../lmages/4.ico" width="50"></img></div>
+            </ons-col>
+            <ons-col>
+              <header>
+                <span class="item-title">{{item4.title}}</span>
+              </header>
+              <p class="item-desc">{{item4.desc}}</p>
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+        
+	
+	  
+        <ons-list-item>
+        <ons-row>
+          <ons-col align="left">
+              	ชื่อ
+            </ons-col>
+            <ons-col align="left">
+           		  สินค้า
+            </ons-col>
+             <ons-col align="center">
+         		    จำนวน
+            </ons-col>
+            </ons-row>
+        </ons-list-item>
+        
+        <ons-list-item style="height: 60px"  id="z8d" ng-click="setShared5(data.id,data.customername,data.productname,data.amount)" modifier="tappable" ng-repeat="data in datas">
+         <ons-row>
+            <ons-col align="left">
+              {{data.customername}}
+            </ons-col>
+            <ons-col align="left">
+              {{data.productname}}
+            </ons-col>
+             <ons-col align="center">
+              {{data.amount}}
+            </ons-col>                   
+          </ons-row>
+        </ons-list-item>
+          
+    
+
+</ons-page>
